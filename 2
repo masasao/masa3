@@ -1,0 +1,24 @@
+#!/usr/bin/python3
+
+import sys
+print("三角形の面積を求めます\n")
+data1 = input("底辺の値を入力してください\n")
+try:
+    float(data1)
+    pass
+except ValueError:
+    it = ("値は整数か少数で入力してください")
+    print(it)
+    sys.exit()
+
+data2 = input("高さを入力してください\n")
+try:
+    float(data2)
+    pass
+except ValueError:
+    it = ("値は整数か少数で入力してください")
+    print(it)
+    sys.exit()
+
+data3 =( float(data1) * float(data2)) / 2
+print("三角形の面積は", data3, "です")
