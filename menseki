@@ -12,10 +12,16 @@ try:
         except ValueError:
             print("整数か少数を入力してください")
             sys.exit()
+        except IndexError:
+            print("空欄があるため実行できません")
+            sys.exit()
         try:
             data3 = float(sys.argv[3])
         except ValueError:
             print("整数か少数を入力してください")
+            sys.exit()
+        except IndexError:
+            print("空欄があるため実行できません")
             sys.exit()
 
         data4 = (data2 * data3)/2
@@ -27,10 +33,16 @@ try:
         except ValueError:
             print("整数か少数を入力してください")
             sys.exit()
+        except IndexError:
+            print("空欄があるため実行できません")
+            sys.exit()
         try:
             data3 = float(sys.argv[3])
         except ValueError:
             print("整数か少数を入力してください")
+            sys.exit()
+        except IndexError:
+            print("空欄があるため実行できません")
             sys.exit()
         data4 = (data2 * data3)
         print("四角形の面積は",data4)
@@ -38,4 +50,7 @@ try:
         print("正しく実行できませんでした。説明をもう一度読んでください。")
 except ValueError:
     print("整数、または少数を入力してください。")
+except IndexError:
+    print("何の計算を行うか指定されていません")
+                            
     
