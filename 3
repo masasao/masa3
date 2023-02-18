@@ -1,8 +1,11 @@
 #!/usr/bin/python3
 import sys
-data = int(input("3or4"))
-if data == 3:
-    print("面積\n")
+data = input("3or4")
+try:
+    int(data)
+    if data == 3:
+        print("面積\n")
+
     data2 = input("底辺")
     try:
         float(data2)
@@ -21,6 +24,28 @@ if data == 3:
     
     kake3 = (float(data2)*float(data3))/2
     print("面積は",kake3,"です。")
+    elif data == 4:
+        print("面積\n")
 
-else:
-    print("終了")
+    data2 = input("底辺")
+    try:
+        float(data2)
+        pass
+    except ValueError:
+        print("ばつ")
+        sys.exit()
+    data3 = input("高さ")
+    try:
+        float(data3)
+        pass
+    except ValueError:
+        print("ばつ")
+        sys.exit()
+    kake3 = (float(data2)*float(data3))/2
+    print("面積は",kake3,"です。")else:
+    else:
+        print("終了")
+
+except ValueError:
+    print("整数の入力をお願いします")
+
