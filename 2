@@ -1,53 +1,58 @@
 #!/usr/bin/python3
 import sys
 
-
-first = int(input("三角形か四角形かどちらかの面積を求めます。\n三角形なら3、四角形なら4と入力してください。\n"))
+try:
+    first = int(input("三角形か四角形かどちらかの面積を求めます。\n三角形なら3、四角形なら4と入力してください。\n"))
 
     
     
-if first == 3:
+    if first == 3:
 
-    print("三角形の面積を求めます\n")
-    data1 = input("底辺の値を入力してください\n")
-    try:
-       float(data1)
-       pass
-    except ValueError:
-        it = ("値は整数か少数で入力してください")
-        print(it)
-        sys.exit()
-    data2 = input("高さを入力してください\n")
-    try:
-        float(data2)
-        pass
-    except ValueError:
-        it = ("値は整数か少数で入力してください")
-        print(it)
-        sys.exit()
-    data3 =( float(data1) * float(data2)) / 2
-    print("三角形の面積は", data3, "です")
+        print("三角形の面積を求めます\n")
+        data1 = input("底辺の値を入力してください\n")
+        try:
+            float(data1)
+            pass
+        except ValueError:
+            it = ("値は整数か少数で入力してください")
+            print(it)
+            sys.exit()
 
-elif first == 4:
-    print("四角形の面積を求めます\n")
-    data1 = input("底辺の値を入力してください\n")
-    try:
-         float(data1)
-         pass
-    except ValueError:
-         it = ("値は整数か少数で入力してください")
-         print(it)
-         sys.exit()
-    data2 = input("高さを入力してください\n")
-    try:
-         float(data2)
-         pass
-    except ValueError:
-         it = ("値は整数か少数で入力してください")
-         print(it)
-         sys.exit()
-    data3 =( float(data1) * float(data2))
-    print("四角形の面積は", data3, "です")
-else:
-    print("すみません。その他の多角形は求めることができません。")
+        data2 = input("高さを入力してください\n")
+        try:
+            float(data2)
+            pass
+        except ValueError:
+            it = ("値は整数か少数で入力してください")
+            print(it)
+            sys.exit()
+        data3 =( float(data1) * float(data2)) / 2
+        print("三角形の面積は", data3, "です")
+
+    elif first == 4:
+        print("四角形の面積を求めます\n")
+        data1 = input("底辺の値を入力してください\n")
+        try:
+            float(data1)
+            pass
+        except ValueError:
+            it = ("値は整数か少数で入力してください")
+            print(it)
+            sys.exit()
+        data2 = input("高さを入力してください\n")
+        try:
+            float(data2)
+            pass
+        except ValueError:
+            it = ("値は整数か少数で入力してください")
+            print(it)
+            sys.exit()
+        data3 =( float(data1) * float(data2))
+        print("四角形の面積は", data3, "です")
+    else:
+        print("すみません。その他の多角形は求めることができません。")
+
+except ValueError:
+    print("3か4を入力してください。")
+
 
