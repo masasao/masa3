@@ -15,7 +15,7 @@
 
 ## インストール方法
 `$ git clone https://github.com/masasao/masa3.git`  
-`cd masa3`  
+`$ cd masa3`  
 を行ってください。  
 ## 動作確認済み環境
 ・Python: 3.7〜3.10 テスト済み  
