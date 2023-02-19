@@ -25,7 +25,7 @@ try:
             sys.exit()
 
         data4 = (data2 * data3)/2
-        print("三角形の面積は",data4)
+        print(data4)
 
     elif data1 == 4:
         try:
@@ -45,7 +45,7 @@ try:
             print("空欄があるため実行できません")
             sys.exit()
         data4 = (data2 * data3)
-        print("四角形の面積は",data4)
+        print(data4)
     else:
         print("正しく実行できませんでした。説明をもう一度読んでください。")
 except ValueError:
